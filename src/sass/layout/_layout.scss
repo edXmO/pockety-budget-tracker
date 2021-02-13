@@ -1,0 +1,147 @@
+// Layout
+.container {
+    background-color: var(--bg-color-container);
+    height: 50rem;
+    width: 85rem;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 0.5fr repeat(8, 1fr) 0.5fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+        "header header header header header header header header header ."
+        "sidebar sidebar content content content content content content content ."
+        "sidebar sidebar content content content content content content content ."
+        "sidebar sidebar content content content content content content content ."
+        "sidebar sidebar content content content content content content content ."
+        "sidebar sidebar content content content content content content content .";
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__heading-container {
+        display: flex;
+        height: 80%;
+        width: 18rem;
+        margin-left: 0.6rem;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color-primary);
+        background: linear-gradient(to right, var(--color-primary-dark), var(--color-primary));
+
+        clip-path: polygon(15% 0, 90% 0, 75% 100%, 0% 100%);
+    }
+
+    &__navbar {
+        flex: 0 0 60%;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        border-bottom: 1px solid var(--color-primary);
+        box-shadow: 0px 2px 1px -1px var(--color-primary-dark), 0 5px 2px -2px var(--color-primary);
+    }
+
+    &__items {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        list-style: none;
+        width: 100%;
+    }
+    &__item {
+        font-size: 1.8rem;
+        &:not(:last-child) {
+            margin-right: 2.3em;
+        }
+    }
+}
+
+.sidebar {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: black;
+    border-bottom-left-radius: 10px;
+    &__navigation {
+        flex: 0 0 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style: none;
+    }
+    &__item {
+        font-family: "Nunito", sans-serif;
+        font-size: 1.6rem;
+        color: var(--bg-color-container);
+        width: 100%;
+        height: 4rem;
+        background-color: black;
+        text-align: center;
+        position: relative;
+    }
+
+    &__item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: var(--color-primary-dark);
+        transform: scaleY(0);
+        transition: transform 0.2s, width 0.4s 0.2s cubic-bezier(1, 0.03, 0, 1.06), background-color 0.1s;
+    }
+    &__item:hover::before,
+    &__item--active::before {
+        transform: scaleY(1);
+        width: 100%;
+    }
+    &__item--active::before {
+        color: var(--color-black);
+    }
+    &__item:active::before {
+        background-color: var(--color-primary-dark);
+    }
+
+    &__link,
+    &__link:active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        text-decoration: none;
+        color: var(--color-black);
+        position: relative;
+        z-index: 100;
+    }
+
+    &__copy {
+        font-family: "Nunito", sans-serif;
+        font-size: 1.2rem;
+        color: var(--bg-color-container);
+        text-align: center;
+        margin: 1rem 1.5rem;
+    }
+    &__git-icon {
+        height: 4.25rem;
+        width: 4.25rem;
+    }
+}
+
+.content {
+    grid-area: content;
+    display: grid;
+    grid-row-gap: 0.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        "history history"
+        "history history"
+        "expense expense";
+}

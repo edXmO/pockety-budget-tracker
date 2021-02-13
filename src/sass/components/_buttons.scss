@@ -1,0 +1,25 @@
+// General components
+.btn {
+    font-size: 1.5rem;
+    font-family: var(--font-default);
+    font-weight: 500;
+    outline: none;
+    background-color: var(--bg-color-container);
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    backface-visibility: hidden;
+    &--yellow {
+        border: 2px solid var(--color-primary);
+        border-radius: 5px;
+        box-shadow: -1px 2.8px 1px 1.3px var(--color-primary), 1px 1px 4px var(--color-primary-dark);
+        transition: transform 0.3s;
+        &:hover {
+            background-color: var(--color-primary-light);
+            transform: translateY(1px);
+            transition: all 0.3s;
+            &:active {
+                transform: translateY(2px);
+            }
+        }
+    }
+}
