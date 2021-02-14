@@ -179,6 +179,10 @@ body {
       transition: all 0.3s; }
       .btn--yellow:hover:active {
         transform: translateY(2px); }
+  .btn a,
+  .btn a:active {
+    text-decoration: none;
+    color: var(--color-black); }
 
 .expenseForm {
   grid-area: expense;
@@ -212,6 +216,8 @@ body {
       font-style: italic;
       color: var(--color-grey-light-1);
       margin: 0 0.5rem; }
+    .expenseForm__input:active {
+      background-color: var(--color-grey-light); }
 
 .history {
   grid-area: history;
@@ -240,3 +246,11 @@ body {
     margin-left: 1rem; }
   .history__text--amount {
     margin-right: 1rem; }
+  .history__icon {
+    height: 20rem;
+    width: 20rem;
+    align-self: center;
+    justify-self: center; }
+
+.chart {
+  grid-area: content; }

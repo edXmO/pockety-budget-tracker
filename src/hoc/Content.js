@@ -10,11 +10,14 @@ const Content = () => {
     const handleDataSubmit = data => {
         setHistory([...history, { ...data, id: history.length }]);
     };
+
     return (
+
         <div className="content">
-            <NewTransactionForm handleDataSubmit={handleDataSubmit} />
+            <NewTransactionForm handleDataSubmit={handleDataSubmit} btnText='New Transaction' />
             <ShowHistory data={history} />
         </div>
+
     );
 };
 

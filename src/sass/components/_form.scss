@@ -40,5 +40,8 @@
             color: var(--color-grey-light-1);
             margin: 0 0.5rem;
         }
+        &:active {
+            background-color: var(--color-grey-light);
+        }
     }
 }

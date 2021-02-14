@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react';
 
-const NewTransactionForm = ({ handleDataSubmit }) => {
+const NewTransactionForm = ({ handleDataSubmit, btnText }) => {
     //useReducer hook to create the formData object,
     //  reducer function to pull the description and amount fields from the e.target object 
     //  and update the state with spread operator
@@ -53,8 +53,8 @@ const NewTransactionForm = ({ handleDataSubmit }) => {
                 />
             </div>
             <button type="submit" className="btn btn--yellow">
-                New Transaction
-        </button>
+                {btnText}
+            </button>
         </form>
     );
 };
