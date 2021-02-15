@@ -15,7 +15,9 @@ const Header = () => {
                         </button>
                     </li>
                     <li className="header__item">
-                        <button className="btn btn--yellow">Resume</button>
+                        <button className="btn btn--yellow">
+                            <Link to="/balance">Balance</Link>
+                        </button>
                     </li>
                     <li className="header__item">
                         <button className="btn btn--yellow">

@@ -14,7 +14,7 @@
         box-shadow: -1px 2.8px 1px 1.3px var(--color-primary), 1px 1px 4px var(--color-primary-dark);
         transition: transform 0.3s;
         &:hover {
-            background-color: var(--color-primary-light);
+            background-color: var(--bg-color-container);
             transform: translateY(1px);
             transition: all 0.3s;
             &:active {

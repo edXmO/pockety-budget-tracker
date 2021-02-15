@@ -30,7 +30,6 @@ const Content = () => {
 
 
     return (
-
         <div className="content">
             <NewTransactionForm handleDataSubmit={handleDataSubmit} btnText='New Transaction' />
             <ShowHistory data={history} removeItem={handleRemoveItem} />

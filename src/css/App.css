@@ -28,7 +28,7 @@ body {
   --bg-color-container: #fffffa;
   --color-primary: #ffb725;
   --color-primary-dark: #e88c17;
-  --color-primary-light: #fff8e9;
+  --color-primary-light: #edf2f7;
   --color-primary-lighttint: #ffe119;
   --color-grey-light: #e5e5e5;
   --color-grey-light-1: #bdc1c5;
@@ -174,7 +174,7 @@ body {
     box-shadow: -1px 2.8px 1px 1.3px var(--color-primary), 1px 1px 4px var(--color-primary-dark);
     transition: transform 0.3s; }
     .btn--yellow:hover {
-      background-color: var(--color-primary-light);
+      background-color: var(--bg-color-container);
       transform: translateY(1px);
       transition: all 0.3s; }
       .btn--yellow:hover:active {
@@ -270,3 +270,57 @@ body {
 .chart {
   grid-area: content;
   align-self: center; }
+
+.balance {
+  height: 90%;
+  grid-area: content;
+  align-self: center;
+  display: grid;
+  grid-template-rows: 5rem repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 1rem; }
+  .balance__total {
+    grid-column: 1/ -1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--bg-color-container);
+    background-color: var(--color-primary);
+    background: linear-gradient(to right, var(--color-primary-dark), var(--color-primary));
+    clip-path: polygon(10% 0, 98% 0, 92% 100%, 4% 100%); }
+  .balance__cards {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; }
+  .balance__card {
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    height: 100%;
+    width: 25rem;
+    cursor: pointer;
+    box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.45);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; }
+    .balance__card h3 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: var(--bg-color-container);
+      border-radius: 5px;
+      height: 3rem;
+      width: 50%;
+      background-color: var(--color-primary);
+      background: linear-gradient(to right, var(--color-primary-dark), var(--color-primary)); }
+  .balance__cash {
+    font-family: "Nunito", sans-serif;
+    font-size: 2rem; }
+    .balance__cash--positive {
+      color: green; }
+    .balance__cash--negative {
+      color: red; }
