@@ -38,7 +38,7 @@ body {
 .container {
   background-color: var(--bg-color-container);
   height: 50rem;
-  width: 85rem;
+  width: 90rem;
   border-radius: 10px;
   display: grid;
   grid-template-columns: 0.5fr repeat(8, 1fr) 0.5fr;
@@ -183,6 +183,12 @@ body {
   .btn a:active {
     text-decoration: none;
     color: var(--color-black); }
+  .btn--delete {
+    opacity: 0;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    transition: opacity 0.25s; }
 
 .expenseForm {
   grid-area: expense;
@@ -242,15 +248,25 @@ body {
     background-color: var(--color-grey-light);
     padding: 1rem 1rem;
     border-radius: 3px; }
-  .history__text--description {
-    margin-left: 1rem; }
-  .history__text--amount {
-    margin-right: 1rem; }
+  .history__item:hover > p .btn--delete,
+  .history .btn--delete:hover {
+    opacity: 1; }
+  .history__text {
+    align-self: center;
+    display: flex;
+    align-items: center; }
+    .history__text--amount {
+      margin-right: 1rem; }
   .history__icon {
     height: 20rem;
     width: 20rem;
     align-self: center;
     justify-self: center; }
+    .history__icon--remove {
+      align-self: center;
+      height: 2rem;
+      width: 2rem; }
 
 .chart {
-  grid-area: content; }
+  grid-area: content;
+  align-self: center; }

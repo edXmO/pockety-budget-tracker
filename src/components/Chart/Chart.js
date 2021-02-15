@@ -1,6 +1,7 @@
 import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
 
+
 const Chart = () => {
 
     const pieData = {
@@ -8,20 +9,20 @@ const Chart = () => {
             'April', 'May'],
         datasets: [
             {
-                label: 'Rainfall',
+                label: 'Expenses',
                 backgroundColor: [
-                    '#B21F00',
-                    '#C9DE00',
-                    '#2FDE00',
-                    '#00A6B4',
-                    '#6800B4'
+                    '#e88c17',
+                    '#bdc1c5',
+                    '#000000',
+                    '#ffe119',
+                    '#bdc1c5'
                 ],
                 hoverBackgroundColor: [
-                    '#501800',
-                    '#4B5000',
-                    '#175000',
-                    '#003350',
-                    '#35014F'
+                    '#e88c17',
+                    '#bdc1c5',
+                    '#000000',
+                    '#ffe119',
+                    '#bdc1c5'
                 ],
                 data: [65, 59, 80, 81, 56]
             }
@@ -32,12 +33,15 @@ const Chart = () => {
         return <Doughnut data={data} options={{
             title: {
                 display: true,
-                text: 'Average Rainfall per month',
-                fontSize: 20
+                text: 'Average Expenses per month (€)',
+                fontSize: 20,
+                fontFamily: "Nunito",
+                fontColor: '#000000',
+                fontStyle: 'italic'
             },
             legend: {
                 display: true,
-                position: 'right'
+                position: 'bottom'
             }
         }} />
     }

@@ -27,4 +27,12 @@
         text-decoration: none;
         color: var(--color-black);
     }
+
+    &--delete {
+        opacity: 0;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        transition: opacity 0.25s;
+    }
 }

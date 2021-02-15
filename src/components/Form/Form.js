@@ -1,23 +1,17 @@
 import React, { useReducer } from 'react';
+import formReducer from '../../reducers/formReducer';
+
+const INITIAL_STATE = {
+    description: '',
+    amount: ''
+}
 
 const NewTransactionForm = ({ handleDataSubmit, btnText }) => {
     //useReducer hook to create the formData object,
     //  reducer function to pull the description and amount fields from the e.target object 
     //  and update the state with spread operator
-    const formReducer = (state, e) => {
-        if (e.reset) {
-            return {
-                description: "",
-                amount: ""
-            };
-        }
-        return {
-            ...state,
-            [e.name]: e.value
-        };
-    };
 
-    const [formData, setFormData] = useReducer(formReducer, {});
+    const [formData, dispatch] = useReducer(formReducer, INITIAL_STATE);
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -25,17 +19,23 @@ const NewTransactionForm = ({ handleDataSubmit, btnText }) => {
     };
 
     const handleChange = e => {
-        setFormData({
-            name: e.target.name,
-            value: e.target.value
-        });
+        dispatch({
+            type: "HANDLE_INPUT",
+            payload: {
+                field: e.target.name,
+                value: e.target.value
+            }
+        })
     };
+
+    const { description, amount } = formData;
     return (
         <form onSubmit={handleSubmit} className="expenseForm">
             <div className="expenseForm__add">
                 <label>Description</label>
                 <input
-                    value={formData.description || ""}
+                    required
+                    value={description}
                     onChange={handleChange}
                     name="description"
                     className="expenseForm__input expenseForm__input--description"
@@ -44,7 +44,8 @@ const NewTransactionForm = ({ handleDataSubmit, btnText }) => {
                 />
                 <label>Amount</label>
                 <input
-                    value={formData.amount || ""}
+                    required
+                    value={amount}
                     onChange={handleChange}
                     name="amount"
                     className="expenseForm__input expenseForm__input--amount"
