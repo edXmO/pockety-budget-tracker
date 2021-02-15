@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/pockety-budget-tracker/static/css/main.b8149f57.chunk.css",
+    "main.js": "/pockety-budget-tracker/static/js/main.85ff45ea.chunk.js",
+    "main.js.map": "/pockety-budget-tracker/static/js/main.85ff45ea.chunk.js.map",
+    "runtime-main.js": "/pockety-budget-tracker/static/js/runtime-main.e72eccd1.js",
+    "runtime-main.js.map": "/pockety-budget-tracker/static/js/runtime-main.e72eccd1.js.map",
+    "static/js/2.79cac6c9.chunk.js": "/pockety-budget-tracker/static/js/2.79cac6c9.chunk.js",
+    "static/js/2.79cac6c9.chunk.js.map": "/pockety-budget-tracker/static/js/2.79cac6c9.chunk.js.map",
+    "index.html": "/pockety-budget-tracker/index.html",
+    "static/css/main.b8149f57.chunk.css.map": "/pockety-budget-tracker/static/css/main.b8149f57.chunk.css.map",
+    "static/js/2.79cac6c9.chunk.js.LICENSE.txt": "/pockety-budget-tracker/static/js/2.79cac6c9.chunk.js.LICENSE.txt",
+    "static/media/broke.ff4d874d.svg": "/pockety-budget-tracker/static/media/broke.ff4d874d.svg",
+    "static/media/remove.562b6f7b.svg": "/pockety-budget-tracker/static/media/remove.562b6f7b.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e72eccd1.js",
+    "static/js/2.79cac6c9.chunk.js",
+    "static/css/main.b8149f57.chunk.css",
+    "static/js/main.85ff45ea.chunk.js"
+  ]
+}
