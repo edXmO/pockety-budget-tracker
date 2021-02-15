@@ -1,8 +1,13 @@
 .history {
     grid-area: history;
+    justify-self: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 80%;
+    border-bottom: 1px solid var(--color-primary);
+    box-shadow: 0px 2px 1px -1px var(--color-primary-dark), 0 5px 2px -2px var(--color-primary);
+
     h3 {
         margin: 1.4rem;
     }
@@ -25,6 +30,7 @@
         background-color: var(--color-grey-light);
         padding: 1rem 1rem;
         border-radius: 3px;
+        cursor: pointer;
     }
 
     &__item:hover > p .btn--delete,
@@ -38,6 +44,12 @@
         align-items: center;
         &--amount {
             margin-right: 1rem;
+        }
+        &--positive {
+            color: green;
+        }
+        &--negative {
+            color: red;
         }
     }
     &__icon {

@@ -6,17 +6,17 @@ const Sidebar = () => {
             <ul className="sidebar__navigation">
                 <li className="sidebar__item sidebar__item--active">
                     <a href="#" className="sidebar__link">
-                        Link 1
+                        Pie
             </a>
                 </li>
                 <li className="sidebar__item">
                     <a href="#" className="sidebar__link">
-                        Link 2
+                        Bar
             </a>
                 </li>
                 <li className="sidebar__item">
                     <a href="#" className="sidebar__link">
-                        Link 3
+                        Radar
             </a>
                 </li>
             </ul>

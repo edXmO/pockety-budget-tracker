@@ -13,9 +13,6 @@
 
     &__add {
         width: 75%;
-        border-top: 1px solid var(--color-primary);
-        // Temporary
-        box-shadow: inset 0px 2px 0.5px var(--color-primary-dark);
         display: flex;
         flex-direction: column;
         justify-self: center;
@@ -23,13 +20,15 @@
 
         label {
             font-family: "Nunito", sans-serif;
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             margin-bottom: 0.5rem;
         }
     }
 
     &__input {
-        padding: 0.5rem 0;
+        font-style: "Nunito";
+        font-size: 1.6rem;
+        padding: 1rem 0;
         margin-bottom: 1rem;
         background-color: var(--color-grey-light);
         outline: none;

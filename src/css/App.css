@@ -37,7 +37,7 @@ body {
 
 .container {
   background-color: var(--bg-color-container);
-  height: 50rem;
+  height: 55rem;
   width: 90rem;
   border-radius: 10px;
   display: grid;
@@ -201,18 +201,18 @@ body {
     margin: 0.8rem 0; }
   .expenseForm__add {
     width: 75%;
-    border-top: 1px solid var(--color-primary);
-    box-shadow: inset 0px 2px 0.5px var(--color-primary-dark);
     display: flex;
     flex-direction: column;
     justify-self: center;
     padding-top: 1.2rem; }
     .expenseForm__add label {
       font-family: "Nunito", sans-serif;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       margin-bottom: 0.5rem; }
   .expenseForm__input {
-    padding: 0.5rem 0;
+    font-style: "Nunito";
+    font-size: 1.6rem;
+    padding: 1rem 0;
     margin-bottom: 1rem;
     background-color: var(--color-grey-light);
     outline: none;
@@ -227,9 +227,13 @@ body {
 
 .history {
   grid-area: history;
+  justify-self: center;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  width: 80%;
+  border-bottom: 1px solid var(--color-primary);
+  box-shadow: 0px 2px 1px -1px var(--color-primary-dark), 0 5px 2px -2px var(--color-primary); }
   .history h3 {
     margin: 1.4rem; }
   .history__items {
@@ -247,7 +251,8 @@ body {
     font-size: 1.6rem;
     background-color: var(--color-grey-light);
     padding: 1rem 1rem;
-    border-radius: 3px; }
+    border-radius: 3px;
+    cursor: pointer; }
   .history__item:hover > p .btn--delete,
   .history .btn--delete:hover {
     opacity: 1; }
@@ -257,6 +262,10 @@ body {
     align-items: center; }
     .history__text--amount {
       margin-right: 1rem; }
+    .history__text--positive {
+      color: green; }
+    .history__text--negative {
+      color: red; }
   .history__icon {
     height: 20rem;
     width: 20rem;
