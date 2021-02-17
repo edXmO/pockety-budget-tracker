@@ -11,7 +11,9 @@ const Header = () => {
                 <ul className="header__items">
                     <li className="header__item">
                         <button className="btn btn--yellow">
-                            <Link to="/new">New Transaction</Link>
+                            <Link
+                                to="/new">
+                                New Transaction</Link>
                         </button>
                     </li>
                     <li className="header__item">

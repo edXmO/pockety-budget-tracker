@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import NewTransactionForm from '../components/Form/Form';
 import ShowHistory from '../components/History/ShowHistory';
 
+
 const Content = () => {
 
     const [history, setHistory] = useState([]);

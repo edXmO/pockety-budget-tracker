@@ -1,6 +1,11 @@
 import React from 'react';
 
 const Balance = () => {
+
+
+
+    const totalBalance = [];
+
     return (
         <div className='balance'>
             <div className='balance__total'>

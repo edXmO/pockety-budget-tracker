@@ -29,6 +29,7 @@ const NewTransactionForm = ({ handleDataSubmit, btnText }) => {
     };
 
     const { description, amount } = formData;
+
     return (
         <form onSubmit={handleSubmit} className="expenseForm">
             <div className="expenseForm__add">

@@ -18,9 +18,9 @@ const App = () => {
         <Header />
         <Sidebar />
         <Switch>
-          <Route path='/new' component={Content} />
-          <Route path='/chart' component={Chart} />
-          <Route path='/balance' component={Balance} />
+          <Route exact path='/new' component={Content} />
+          <Route exact path='/chart' component={Chart} />
+          <Route exact path='/balance' component={Balance} />
         </Switch>
       </div>
     </Router>
